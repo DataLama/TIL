@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# datalama
+pytorch/train/data
+pytorch/train/.*
+pytorch/train/lightning_logs/*
+pytorch/train/logs

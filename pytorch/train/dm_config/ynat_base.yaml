@@ -1,0 +1,31 @@
+# batch_size
+batch_size: 32
+
+# Arguments for HFTransformerDataConfig
+train_file: data/ynat-v1/train.csv
+validation_file: data/ynat-v1/validation.csv
+test_file: null
+
+padding: False # padding -> 'max_length', not padding -> False (dynamic padding)
+truncation: true
+max_length: 128
+preprocessing_num_workers: 8
+load_from_cache_file: true
+cache_dir: null
+
+
+# Arguments for task
+finetuning_task: ynat
+is_regression: false
+id2label: 
+    - IT과학
+    - 경제
+    - 사회
+    - 생활문화
+    - 세계
+    - 스포츠
+    - 정치
+
+sentence1_key: text
+sentence2_key: null
+label_key: label
